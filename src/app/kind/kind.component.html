@@ -1,0 +1,15 @@
+<div class="kind">
+  <!-- <app-search></app-search> -->
+  <div class="content">
+    <div class="title">
+      <p>本周流行</p>
+    </div>
+    <div class="list">
+      <a *ngFor="let item of list;index as i" (click) = 'gotwokind(item.link)'>
+          <img src="{{item.image}}" alt="">
+          <p>{{item.title}}</p>
+      </a>
+    </div>
+  </div>
+  <app-footer [page]="1"></app-footer>
+</div>

@@ -1,0 +1,84 @@
+.home{
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    .red{
+        color: rgb(255, 51, 102);
+        border-bottom:0.02rem solid rgb(255, 51, 102);
+    }
+    .content{
+        flex:1;
+        overflow: auto;
+        .banner{
+            width: 100%;
+        }
+        .four{
+            width: 100%;
+            height: 1.1rem;
+            display: flex;
+            padding-bottom:0.1rem;
+            padding-top:0.06rem;
+            background: #fff;
+            margin-top:-0.02rem;
+            li{
+                flex:1;
+                text-align: center;
+                img{
+                    width: 0.8rem;
+                }
+            }
+        }
+        .poplur{
+            margin-top:0.1rem;
+            width: 100%;
+        }
+        .sort{
+            width: 100%;
+            height: 0.4rem;
+            background: #fff;
+            display: flex;
+            margin-top:0.1rem;
+            align-items: center;
+            justify-content: space-around;
+            span{
+                display: inline-block;
+                padding: 0.05rem;
+                text-align: center;
+            }
+        }
+        .pro_list{
+            display: flex;
+            flex-wrap: wrap;
+            background: #fff;
+            a{
+                display: inline-block;
+                width: 50%;
+                padding: 0.05rem;
+                box-sizing: border-box;
+                text-align: center;
+                img{
+                    width: 100%;
+                    height: 2.6rem;
+                }
+                p{
+                    overflow: hidden;white-space: nowrap;text-overflow: ellipsis;
+                    font-size: 0.12rem;
+                    span{
+                        color:#FF3366;
+                    }
+                    i{
+                        color:#FF3366;
+                        font-size: 0.12rem;
+                        margin-left: 0.1rem;
+                    }
+                    time{
+                        color:#999;
+                        font-size: 0.12rem;
+                        margin-left:0.04rem;
+                    }
+                }
+            }
+        }
+    }
+}

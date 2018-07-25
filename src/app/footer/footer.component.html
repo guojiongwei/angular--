@@ -1,0 +1,6 @@
+<footer>
+    <a  *ngFor="let item of list; index as i" [routerLink] = "[item.path]" [style.color]="i==page ?'#ff3366':''">
+      <p class="" class="{{item.icon}}"></p>
+      <p>{{item.title}}</p>
+    </a>
+</footer>

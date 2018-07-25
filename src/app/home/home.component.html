@@ -1,0 +1,26 @@
+<div class="home">
+  <div class="content">
+    <app-search></app-search>
+    <img class="banner" src='{{banner}}' />
+    <ul class="four">
+      <li  *ngFor="let item of bannerlist;index as i">
+        <img src="{{item.image}}" alt="">
+        <p>{{item.title}}</p>
+      </li>
+    </ul>
+      <img class="poplur" src="https://s10.mogucdn.com/mlcdn/c45406/171030_6ja2gfl82cl093768ilk7g0fb2fj1_740x543.jpg_800x9999.v1c7E.70.jpg" alt="">
+    <div class="sort">
+      <span (click) ='sort("pop")' [class] = 'sorts == "pop" ? "red": "" '>流行</span>
+      <span (click) ='sort("new")' [class] = 'sorts == "new" ? "red": "" '>新款</span>
+      <span (click) ='sort("sell")' [class] = 'sorts == "sell" ? "red": "" '>精选</span>
+    </div>
+    <div class="pro_list">
+      <a  *ngFor="let item of pro_list;index as i" [routerLink] = "['/detail', item.iid]">
+          <img src="{{item.show.img}}" alt="">
+          <p>{{item.title}}</p>
+          <p><span>{{item.price}}</span><i class="iconfont icon-xihuan1"></i> <time>{{item.sale}}</time></p>
+      </a>
+    </div>
+  </div>
+  <app-footer [page]="0"></app-footer>
+</div>

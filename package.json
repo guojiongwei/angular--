@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "dev": "concurrently  \"ng serve\" \"node ./src/assets/js/option.js\"",
+    "start": "npm run dev",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -20,7 +21,12 @@
     "@angular/platform-browser": "^6.0.3",
     "@angular/platform-browser-dynamic": "^6.0.3",
     "@angular/router": "^6.0.3",
+    "axios": "^0.18.0",
+    "concurrently": "^3.6.0",
     "core-js": "^2.5.4",
+    "http": "0.0.0",
+    "jquery": "^3.3.1",
+    "jsonp": "^0.2.1",
     "rxjs": "^6.0.0",
     "zone.js": "^0.8.26"
   },

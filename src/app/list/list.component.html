@@ -1,0 +1,18 @@
+<div class="home">
+    <div class="content">
+      <app-search></app-search>
+      <div class="sort">
+        <span (click) ='sort("pop")' [class] = 'sorts == "pop" ? "red": "" '>流行</span>
+        <span (click) ='sort("new")' [class] = 'sorts == "new" ? "red": "" '>新款</span>
+        <span (click) ='sort("sell")' [class] = 'sorts == "sell" ? "red": "" '>精选</span>
+      </div>
+      <div class="pro_list">
+        <a  *ngFor="let item of pro_list;index as i" [routerLink] = "['/detail', item.iid]">
+            <img src="{{item.show.img}}" alt="">
+            <p>{{item.title}}</p>
+            <p><span>{{item.price}}</span><i class="iconfont icon-xihuan1"></i> <time>{{item.sale}}</time></p>
+        </a>
+      </div>
+    </div>
+  </div>
+  

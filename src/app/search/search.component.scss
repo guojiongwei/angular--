@@ -1,0 +1,33 @@
+header{
+    height: 0.45rem;
+    background:#fff;
+    display: flex;
+    padding:0.05rem 0.1rem;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-between;
+    div{
+        flex:1;
+        height: 0.32rem;
+        margin:0 0.1rem;
+        background: #F4F4F4;
+        border-radius: 0.05rem;
+        box-sizing: border-box;
+        line-height: 0.32rem;
+        padding:0 0.1rem;
+        display: flex;
+        align-items: center;
+        input{
+            text-indent: 0.1rem;
+            border: 0;
+            width: 80%;
+            height: 80%;
+            background: #F4F4F4;
+            outline: none;
+        }
+    }
+    i{
+        // display: inline-block;
+        font-size: 0.18rem;
+    }
+}
