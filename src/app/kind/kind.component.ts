@@ -19,16 +19,11 @@ export class KindComponent implements OnInit {
     });
   }
   gotwokind (item: String) {
-    // console.log(item.split('?')[1]);
-    console.log(item.indexOf('pid'));
     if (item.indexOf('pid') !== -1) {
        const pid = item.split('pid=')[1].split('&')[0];
-       console.log(pid);
-      //  this.router.navigate(['/twokind', pid]);
        this.router.navigate(['/twokind', pid]);
     } else {
         const fcid = item.split('fcid=')[1].split('&')[0];
-        console.log(fcid);
         this.router.navigate(['/list', fcid]);
     }
   }

@@ -1,32 +1,44 @@
-import { Component, OnInit, ViewChild, Input } from '@angular/core';
-import { CartComponent } from './../cart/cart.component';
+// 在life.component.ts代码
+import { Component,  OnInit, Input, OnChanges, SimpleChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy} from '@angular/core';
+
 @Component({
-  selector: 'app-user',
+  selector: 'app-life',
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.scss']
 })
-export class UserComponent implements OnInit {
-  @ViewChild(CartComponent) child: CartComponent;
-  father() {
-    // 调用子组件方法
-    // this.child.childFn();
-    console.log(this);
+export class UserComponent implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
+  @Input() item: String = '';
+  private index: any = 0;
+  log(arg): void {
+    console.log(`#${this.index}我是${arg}内容`);
+    this.index ++;
   }
-  constructor() { }
-
+  constructor() {
+      this.log('constructor');
+  }
+  // 页面初始化
   ngOnInit() {
-    console.log(this);
+    this.log('ngOnInit');
   }
-  onChild(i: any) {
-    // this.i = i;
-    console.log(i);
+  ngOnChanges(changes: SimpleChanges) {
+    this.log('ngOnChanges');
   }
-  // @Input()
-  bar(event: any ) {
-    console.log(event);
+  ngDoCheck() {
+    this.log('ngDoCheck');
   }
-  // tap () {
-  //   console.log(this);
-  //   this.child.tap();
-  // }
+  ngAfterContentInit() {
+    this.log('ngAfterContentInit');
+  }
+  ngAfterContentChecked() {
+    this.log('ngAfterContentChecked');
+  }
+  ngAfterViewInit() {
+    this.log('ngAfterViewInit');
+  }
+  ngAfterViewChecked() {
+    this.log('ngAfterViewChecked');
+  }
+  ngOnDestroy() {
+    this.log('ngOnDestroy');
+  }
 }
