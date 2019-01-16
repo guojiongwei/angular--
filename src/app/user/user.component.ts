@@ -1,25 +1,41 @@
-import { Component, OnInit, ViewChild, Input } from '@angular/core';
+import { Component,  OnInit, Input, ViewChild, OnChanges, SimpleChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy} from '@angular/core';
 import { CartComponent } from './../cart/cart.component';
 import { FooterComponent } from './../footer/footer.component';
+// 在life.component.ts代码
 
 @Component({
-  selector: 'app-user',
+  selector: 'app-life',
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.scss']
 })
-export class UserComponent implements OnInit {
-  private list = [1, 2, 3, 4];
-  @ViewChild(CartComponent) child: CartComponent;
-  @ViewChild(FooterComponent) child1: FooterComponent;
-  father() {
-    // 调用子组件方法
-    // this.child.childFn();
-    console.log(this);
+export class UserComponent implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
+  @Input() item: String = '';
+  private index: any = 0;
+  log(arg): void {
+    console.log(`#${this.index}我是${arg}内容`);
+    this.index ++;
   }
-  constructor() { }
-
+  constructor() {
+      console.log('constructor');
+  }
+  // 页面初始化
   ngOnInit() {
-    console.log(this);
+    console.log('ngOnInit');
+  }
+  ngOnChanges(changes: SimpleChanges) {
+    console.log('ngOnChanges');
+  }
+  ngDoCheck() {
+    console.log('ngDoCheck');
+  }
+  ngAfterContentInit() {
+    console.log('ngAfterContentInit');
+  }
+  ngAfterContentChecked() {
+    console.log('ngAfterContentChecked');
+  }
+  ngAfterViewInit() {
+    console.log('ngAfterViewInit');
   }
   formChild(item: string) {
     console.log(item);
@@ -27,12 +43,10 @@ export class UserComponent implements OnInit {
   onChild(i: any) {
     console.log(i);
   }
-  // @Input()
-  bar(event: any ) {
-    console.log(event);
+  ngAfterViewChecked() {
+    console.log('ngAfterViewChecked');
   }
-  // tap () {
-  //   console.log(this);
-  //   this.child.tap();
-  // }
+  ngOnDestroy() {
+    console.log('ngOnDestroy');
+  }
 }

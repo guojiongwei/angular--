@@ -18,6 +18,7 @@ export class HomeComponent implements OnInit {
   private pro_list: Array<any>;
   ngOnInit() {
     $.getJSON('https://mce.mogucdn.com/jsonp/multiget/3?pids=5868%2C6348%2C43542%2C13730&callback=?', (res) => {
+      console.log(res);
       this.bannerlist = res.data[13730].list;
       this.banner = res.data[43542].list;
     });
