@@ -1,0 +1,29 @@
+@import './../search.component.scss';
+.serch-list{
+    width: 100%;
+    background: #fff;
+    padding: 0 .2rem;
+    box-sizing: border-box;   
+}
+.serch-list li{
+    width: 100%;
+    padding: .05rem 0;
+    height: .4rem;
+    height: .4rem;
+    color: #333;
+    line-height: .4rem;
+    border-bottom: 0.01rem solid #ececec;
+}
+.serch-list li span{
+    display: inline-block;
+    font-size: 0.12rem;
+    line-height: .12rem;
+    background-color: #F8F8F8;
+    border-radius: 0.2rem;
+    padding: .04rem .1rem;
+    color: #666;
+    margin-left: 0.05rem;
+    float: right;
+    position: relative;
+    top: .1rem;
+}

@@ -1,7 +1,9 @@
 <div class="home">
   <div class="content">
     <!-- <button (click) = 'tap()'>点击</button> -->
-    <app-cart (toParent)="onChild($event)"></app-cart>
+    <!-- <app-cart (toParent)="onChild($event)"></app-cart> -->
+    <app-user-child [list]='list' #child (toParent)='formChild($event)'></app-user-child>
+    <button (click) = 'child.a()'>操作子组件</button>
   </div>
   <app-footer [page]="3"></app-footer>
 </div>

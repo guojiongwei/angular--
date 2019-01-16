@@ -3,6 +3,13 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    .swiper-container,.swiper-wrapper, .swiper-slide {
+        width: 100% !important;
+        height: 2rem;
+        img{
+            width: 100% !important;
+        }
+    }  
     .red{
         color: rgb(255, 51, 102);
         border-bottom:0.02rem solid rgb(255, 51, 102);

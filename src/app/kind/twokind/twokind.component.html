@@ -1,10 +1,10 @@
 <div class="kind">
   <app-search></app-search>
-  <div class="content" *ngFor="let items of list;index as i">
-    <div class="title" *ngIf="items.list.length>1">
+  <div class="content" *ngFor="let items of list" [style.flex]='items.list.length>0?1:0'>
+    <div class="title" *ngIf="items.list.length>0">
       <p>{{items.info.title}}</p>
     </div>
-    <div class="list">
+    <div class="list" *ngIf="items.list.length>0">
       <a *ngFor="let item of items.list;index as i" (click) = 'gotwokind(item.link)'>
           <img src="{{item.image}}" alt="">
           <p>{{item.title}}</p>

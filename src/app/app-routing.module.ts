@@ -8,7 +8,7 @@ import { CartComponent } from './cart/cart.component';
 import { UserComponent } from './user/user.component';
 import { DetailComponent } from './detail/detail.component';
 import { ListComponent } from './list/list.component';
-
+import { SearchListComponent } from './search/search-list/search-list.component';
 const routes: Routes = [
   {
     path: '',
@@ -37,6 +37,10 @@ const routes: Routes = [
   {
     path: 'list/:fcid',
     component: ListComponent
+  },
+  {
+    path: 'search_list',
+    component: SearchListComponent
   }
 ];
 

@@ -1,6 +1,11 @@
 <div class="home">
   <div class="content">
-    <button (click)="todo($event)">点击sssssssssss</button>
+    <!-- <button (click)="todo($event)">点击sssssssssss</button> -->
+    <ul id="lists">
+      <li *ngFor="let item of list;index as i" (click)='tap(i)' [class] = 'index == i ? "active": "" '>
+        {{item.title}}
+      </li>
+    </ul>
   </div>
   <app-footer [page]="2"></app-footer>
 </div>

@@ -14,8 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { SearchComponent } from './search/search.component';
 import { TwokindComponent } from './kind/twokind/twokind.component';
 import { ListComponent } from './list/list.component';
-import { MaskComponent } from './user/mask/mask.component';
-
+import { UserChildComponent } from './user/user-child/user-child.component';
+import { SearchListComponent } from './search/search-list/search-list.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +29,8 @@ import { MaskComponent } from './user/mask/mask.component';
     SearchComponent,
     TwokindComponent,
     ListComponent,
-    MaskComponent
+    UserChildComponent,
+    SearchListComponent
   ],
   imports: [
     BrowserModule,

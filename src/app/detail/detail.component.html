@@ -1,4 +1,28 @@
 <div class="detail">
-  <img src="{{banner}}" alt="" class="banner">
-  <h3>{{itemInfo.title}}</h3>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" *ngFor="let item of banner">
+          <img src="{{item}}" alt="">
+        </div>
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+  </div>
+  <div class="detail-info">
+    <h4 *ngIf='itemInfo.title'>{{itemInfo.title}}</h4>
+    <div class="info-price">
+      <span [ngStyle]="{color: '#f69'}" style="font-size: 0.2rem">{{itemInfo.oldPrice}}</span>
+      <span class="price">{{itemInfo.price}}</span>
+      <span class="discountDesc">{{itemInfo.discountDesc}}</span>
+    </div>
+    <div class="info-num">
+      <span *ngFor='let item of columns'>
+        {{item}}
+      </span>
+    </div>
+  </div>
+  
+  <div class="detail-banner">
+    <img *ngFor="let item of detailBanner" class="detail-banner-list" src="{{item}}" />
+  </div>
 </div>
