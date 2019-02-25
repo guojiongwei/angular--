@@ -4,7 +4,7 @@ var dc = document.documentElement;
     mt.content = "width=device-width,initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0,user-scalable=no";
     dc.firstElementChild.appendChild(mt);
     var autoSizie = function () {
-      var dw = dc.clientWidth;
+      var dw = dc.clientWidth > 800 ? 800 : dc.clientWidth;
       var dpr = Math.min(window.devicePixelRatio, 3);
       //dw / dpr > 750 && (dw = 750 * dpr);
       window.remScale = dw / 750;

@@ -15,13 +15,18 @@ export class SearchListComponent implements OnInit {
   }
   change() {
     // console.log(this.search);
-    $.getJSON(`https://search.mogujie.com/jsonp/searchTipsMLS/1?data=%7B"keyword"%3A"${this.search}"%7D&_=1543848383328&callback=?`, res => {
-      console.log(res);
-      if (res.success) {
-        this.list = res.data.tips;
-        console.log(this.list);
-      }
-    });
+    // $.getJSON(`https://search.mogujie.com/jsonp/searchTipsMLS/1?data=%7B"keyword"%3A"${this.search}"%7D&_=1543848383328&callback=?`, res => {
+    //   console.log(res);
+    //   if (res.success) {
+    //     this.list = res.data.tips;
+    //     console.log(this.list);
+    //   }
+    // });
+  }
+  searchs(event) {
+    event.stopPropagation();
+    this.router.navigate(['/list', this.search]);
+    // this.click.next(title);
   }
   toList(event, title) {
     event.stopPropagation();

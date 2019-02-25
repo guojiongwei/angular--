@@ -2,7 +2,7 @@
   <header>
     <i class="iconfont icon-shouye" (click)='toHome()'></i>
         <div><i class="iconfont icon-sousuo"></i><input [(ngModel)]='search' (keyup)='change()'  type="text" placeholder="请输入关键词"></div>
-    <i class="iconfont icon-pinglun"></i>
+    <span (click)='searchs($event)'>搜索</span>
   </header>
   <ul class="serch-list">
     <li *ngFor="let item of list" (click)='toList($event,item.title)'>
